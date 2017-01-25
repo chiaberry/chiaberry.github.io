@@ -195,8 +195,6 @@ function ViewModel() {
     //and url
 
     $.getJSON(url, function(data){
-      console.log(data.response.venues[0].name);
-      //foursqID = data.response.venues[0].id;
       if (data.response.venues[0].categories[0].name !== undefined){
         fsIconUrl = data.response.venues[0].categories[0].icon.prefix + 'bg_32' + 
                     data.response.venues[0].categories[0].icon.suffix;
@@ -257,7 +255,6 @@ function ViewModel() {
 
 
   $.getJSON(w_url, function(data){
-    console.log(data);
     self.weatherTemp(data.current_observation.temp_f +"F");
     self.weatherFaren(true);
   }).fail(function(err){
