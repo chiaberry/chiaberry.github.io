@@ -59,7 +59,7 @@ var foursquare_creds = {
 };
 
 var wu_key = '08a65962d9394874';
-var w_url = "http://api.wunderground.com/api/"+ wu_key +"/conditions/q/" +
+var w_url = "https://api.wunderground.com/api/"+ wu_key +"/conditions/q/" +
               sanmiguel_coord.lat +","+sanmiguel_coord.lng + ".json";
 
 
