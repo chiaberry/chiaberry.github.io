@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Neighborhood Mapa</title>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<div class="container">
+	<div class="row">
+		<div class="col-xs-8">
+			<h1>San Miguel!</h1>
+		</div>
+
+		<div class="col-xs-4" id="weather">
+			<p>It is  <span class="temp" data-bind="text:$data.weatherTemp, click: changeUnits"></span> in San Miguel.
+			<img id="wu" src="https://icons.wxug.com/logos/PNG/wundergroundLogo_4c.png"></p>
+		</div>
+	</div>
+
+	<div class="row">
+
+		<div class='col-xs-3' id='sidebar'>
+			<input type="search" placeholder="type to filter locations..." class="form-control" data-bind="textInput: userInput, event: {keyup: filterLocations}">
+			<ul class="list-group" id="places" data-bind="foreach: visiblePlaces">
+				<a class="list-group-item" data-bind="text:$data.name, click: $root.loadWindow, css: {active: $root.isSelected($data)}">
+				</a>
+			</ul>
+			<input type="button" class="btn btn-default" data-bind="click: showAllPlaces" value="Clear Filter">
+		</div>
+
+		<div class = 'col-sm-9' id="map"></div>
+
+	</div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.1/knockout-min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/app.js"></script>
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQjxSqCo9WHGLooK-tLG7uQWf7YD52o4Y&callback=ready" onerror="googleError()">
+</script>
+
+
+
+</body>
+</html>
