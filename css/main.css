@@ -1,0 +1,32 @@
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#map {
+  height: 450px;
+  border-radius: 10px; 
+}
+
+
+.credit{
+	font-size: 75%;
+	margin-top: 6px;
+
+}
+
+.fsIcon { 
+	margin: 0px 5px 5px 0px;
+ }
+
+#wu {
+  width: 80px;
+}
+
+#weather{
+  text-align:right;
+
+}
